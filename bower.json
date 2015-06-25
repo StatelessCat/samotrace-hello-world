@@ -1,0 +1,25 @@
+.{
+  "name": "samotraces-hello-world",
+  "version": "0.0.1",
+  "homepage": "https://github.com/StatelessCat/samotraces-hello-world",
+  "authors": [
+    "Raphael Cazenave-Leveque <raphael.cazenave@gmail.com>"
+  ],
+  "description": "samotraces-hello-world",
+  "keywords": [
+    "samotraces",
+    "webcomponents",
+    "javascript"
+  ],
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "samotraces": "Polymer/samotraces#^1.0.0"
+  }
+}

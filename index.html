@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="libs/d3.js"></script>
+        <script type="text/javascript" src="libs/jquery.js"></script>
+        <script type="text/javascript" src="libs/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="libs/Samotraces.js"></script>
+        <link rel="stylesheet" type="text/css" href="libs/samotraces.css">
+    </head>
+    <body>
+        <div id="my-widget"></div>
+        <script type="text/javascript">
+        function init() {
+            // Create logical objects
+            var trace        = new Samotraces.LocalTrace();
+            var tw            = new Samotraces.TimeWindow({start: 0,end: 20});
+
+            trace.create_obsel({type: 'click', begin: 1});
+            trace.create_obsel({type: 'click', begin: 5});
+            trace.create_obsel({type: 'click', begin: 12});
+
+            // Create widgets
+            new Samotraces.UI.Widgets.TraceDisplayIcons('my-widget',trace,tw);
+        }
+
+        // calling the init function when the DOM has been loaded
+        window.addEventListener('DOMContentLoaded', init );
+        </script>
+    </body>
+</html>
